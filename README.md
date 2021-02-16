@@ -15,7 +15,26 @@ $ git clone git@github.com:Pedr0visk/boilerplate-laravel-app.git
 $ cd laravel-app && docker run --rm -v $(pwd):/app composer install
 ```
 
-3. Back to the root project directory `$ cd ..` and run the project using the command:
+3. Back to the root project directory `$ cd ..` and modify the environment settings to run the containers:
+```sh
+
+$ cp .env.example .env
+$ nano .env
+```
+
+**replace to:**
+
+```sh
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=you_laravel_db_user
+DB_PASSWORD=your_laravel_db_password
+```
+
+after that, run the containers:
+
 ```sh
 
 $ docker-compose up -d
