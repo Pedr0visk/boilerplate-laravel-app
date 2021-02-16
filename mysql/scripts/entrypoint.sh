@@ -1,0 +1,2 @@
+GRANT ALL ON laravel.* TO 'admin'@'%' IDENTIFIED BY '1234';
+FLUSH PRIVILEGES;
